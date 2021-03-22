@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" >
+</head>
+<body>
+	
+	<h1>Add User</h1>
+	<form action="/users" method="POST">
+		<div class="input-group">
+			<label>Name</label>
+			<input type="text" name="name">
+		</div>
+
+		<div class="input-group">
+			<label>Email</label>
+			<input type="text" name="email">
+		</div>
+
+		<div class="input-group">
+			<label>Password</label>
+			<input type="text" name="password">
+		</div>
+
+		<button type="submit">Send</button>
+		<a href="/users">Kembali</a>
+	</form>
+	<footer>
+		<p>&copy; 2020 kelas.UtinChindySelvira</p>
+	</footer>
+</body>
+</html>
+

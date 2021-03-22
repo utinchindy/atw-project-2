@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+	<%- include('../components/navbar')%>
+	<a href="/users/create">Registrasi</a>
+	<h1>Daftar User (<%=users.length%>)</h1>
+	<form action="/users">
+		<input type="text" name="keyword">
+		<button type="submit">Cari</button>
+	</form>
+	<ul>
+		<% if(users.length > 0) { %>
+		<% users.forEach(function(user) {%>
+		<li><a href="/users/<%=user.id %>">
+			<%=user.name.toUpperCase() %></a>
+		</li>
+	<% }) %>
+	<% } else { %>
+		<p>data user kosong.</p>
+	<% } %>
+	</ul>
+	<footer>
+		<p>&copy; 2020 kelas.UtinChindySelvira</p>
+	</footer>
+</body>
+</html>

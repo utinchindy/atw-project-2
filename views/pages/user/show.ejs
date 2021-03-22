@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+	<link rel="stylesheet" type="/style.css">
+</head>
+<body>
+	<%- include('../components/navbar') %>
+	<a href="/users">Kembali</a>
+
+	<h1>Detail User</h1>
+	<ul>
+		<li>Nama: <strong><%=user.name %></strong></li>
+		<li>Email: <strong><%=user.email %></strong></li>
+	</ul>
+
+	<a href="/users/<%=user._id %>/edit">Edit</a>
+	<a href="/users/id">Delete</a>
+	<footer>
+		<p>&copy: 2020 kelas.UtinChindySelvira</p>
+	</footer>
+</body>
+</html>
